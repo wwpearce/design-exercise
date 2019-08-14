@@ -4,6 +4,8 @@ import DesktopBackground from '../images/desktop-bgr.gif';
 import MobileBackground from '../images/mobile-bgr.gif';
 import './Form.scss';
 
+import Picker from './Picker.js';
+
 let isMobile = false;
 
 let background = isMobile ? MobileBackground : DesktopBackground;
@@ -27,10 +29,16 @@ class Form extends Component {
 
   render() {
     return (
+      <div>
+      <Picker show={this.state.show} handleClose={this.hidePicker}>
+          <p>Modal</p>
+          <p>Data</p>
+        </Picker>
       <div className="formWrapper">
         <div className="form" style={ formStyle }>
           <div className="hit" onClick={this.showPicker}>hello</div>
         </div>
+      </div>
       </div>
     );
   }
