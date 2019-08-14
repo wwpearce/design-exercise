@@ -1,0 +1,22 @@
+@import '../variables';
+
+.pickerHeader {
+  align-items: center;
+  display: flex;
+  height: 64px;
+  justify-content: space-between;
+  padding: 0 16px;
+  border-bottom: 1px solid $border-color;
+  p {
+    color: $date-gray;
+    font-size: 12px;
+  }
+  .dateInputWrapper {
+    height: 44px;
+    input {
+      height: 100%;
+      padding: initial 0;
+      box-sizing: border-box;
+    }
+  }
+}

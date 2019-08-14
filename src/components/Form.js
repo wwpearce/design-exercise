@@ -27,16 +27,21 @@ class Form extends Component {
     console.log(this.state.show);
   };
 
+  handleCancel = () => {
+    this.hidePicker();
+  };
+
+  handleDone = () => {
+    this.hidePicker();
+  };
+
   render() {
     return (
       <div>
-      <Picker show={this.state.show} handleClose={this.hidePicker}>
-          <p>Modal</p>
-          <p>Data</p>
-        </Picker>
+      <Picker show={this.state.show} handleClose={this.hidePicker} handleCancel={this.handleCancel} handleDone={this.handleDone}/>
       <div className="formWrapper">
         <div className="form" style={ formStyle }>
-          <div className="hit" onClick={this.showPicker}>hello</div>
+          <div className="hit" onClick={this.showPicker}></div>
         </div>
       </div>
       </div>

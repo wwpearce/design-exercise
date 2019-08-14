@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
-
+import React from 'react';
+import PickerHeader from './PickerHeader';
 
 import './Picker.scss';
 
-const Picker = ({ handleClose, show, children }) => {
+const Picker = ({ handleClose, handleCancel, handleDone, show }) => {
   const showHideClassName = show ? "modal display-block" : "modal display-none";
-  console.log(showHideClassName);
 
   return (
     <div className={showHideClassName}>
       <section className="modal-main">
-        {children}
-        <button onClick={handleClose}>close</button>
+        <PickerHeader />
+        <button onClick={handleCancel}>Cancel</button>
+        <button onClick={handleDone}>Done</button>
       </section>
     </div>
   );

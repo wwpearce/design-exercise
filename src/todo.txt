@@ -1,2 +1,3 @@
 - Optimize images and make sure they are correctly responsive
 - Make sure hit area sticks to the correct spot
+- Retool box shadow
