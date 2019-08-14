@@ -2,21 +2,33 @@
 
 .pickerHeader {
   align-items: center;
+  border-bottom: 1px solid $border-color;
   display: flex;
   height: 64px;
   justify-content: space-between;
   padding: 0 16px;
-  border-bottom: 1px solid $border-color;
   p {
     color: $date-gray;
     font-size: 12px;
   }
   .dateInputWrapper {
     height: 44px;
+    position: relative;
     input {
-      height: 100%;
-      padding: initial 0;
       box-sizing: border-box;
+      height: 100%;
+    }
+    &::after {
+      content: '< >';
+      font-size: 10px;
+      height: 10px;
+      position: absolute;
+      right: 0px;
+      text-align: center;
+      transform: translateY(50%);
+      transform-origin: center;
+      vertical-align: middle;
+      width: 30px;
     }
   }
 }

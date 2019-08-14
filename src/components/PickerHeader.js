@@ -8,7 +8,7 @@ const PickerHeader = () => {
     <div className="pickerHeader">
       <p>Select date</p>
       <div className="dateInputWrapper">
-        <input type="input" value="09/14/2019" />
+        <input type="input" />
       </div>
     </div>
   );
