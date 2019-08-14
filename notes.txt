@@ -1,0 +1,8 @@
+Hi Pratik (or whomever)! Just wanted to write some notes about my process as I
+went along.
+
+- I'm using `create-react-app` to bootstrap the React app. When I'm wearing my
+prototyper hat, I'll leverage this (along with any other clean libraries) to
+move as quickly as possible. I noticed that the instructions said not to use any
+kind of CSS bootstrapping so I'll abstain on that for now. But just a note that
+in my day to day, if it saves me time and is clean, I'm using it :D
