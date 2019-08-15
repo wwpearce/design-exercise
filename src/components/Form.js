@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import DesktopBackground from '../images/desktop-bgr.gif';
-import MobileBackground from '../images/mobile-bgr.gif';
-import './Form.scss';
+import DesktopBackground from "../images/desktop-bgr.gif";
+import MobileBackground from "../images/mobile-bgr.gif";
+import "./Form.scss";
 
-import Picker from './Picker.js';
+import Picker from "./Picker.js";
 
 let isMobile = false;
 
@@ -38,12 +38,17 @@ class Form extends Component {
   render() {
     return (
       <div>
-      <Picker show={this.state.show} handleClose={this.hidePicker} handleCancel={this.handleCancel} handleDone={this.handleDone}/>
-      <div className="formWrapper">
-        <div className="form" style={ formStyle }>
-          <div className="hit" onClick={this.showPicker}></div>
+        <Picker
+          show={this.state.show}
+          handleClose={this.hidePicker}
+          handleCancel={this.handleCancel}
+          handleDone={this.handleDone}
+        />
+        <div className="formWrapper">
+          <div className="form" style={formStyle}>
+            <div className="hit" onClick={this.showPicker}></div>
+          </div>
         </div>
-      </div>
       </div>
     );
   }

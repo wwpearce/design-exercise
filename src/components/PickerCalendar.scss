@@ -1,3 +1,34 @@
+@import '../variables';
+
 .pickerCalendar {
-  
+  padding: 32px;
+  .monthWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .dayNames {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0 16px 0;
+    div {
+      width: $date-size;
+    }
+  }
+  .datesWrapper {
+    display: inline-grid;
+    grid-auto-rows: $date-size;
+    grid-template-columns: repeat(7, $date-size);
+    justify-content: space-between;
+    grid-gap: 12px;
+    width: 100%;
+    div {
+      margin: 6px 0;
+      height: $date-size;
+    }
+  }
+  .dayNames, .datesWrapper {
+    text-align: center;
+  }
 }
