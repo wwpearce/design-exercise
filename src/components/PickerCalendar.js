@@ -12,9 +12,13 @@ class PickerCalendar extends Component {
     return (
       <div className="pickerCalendar">
         <div className="monthWrapper">
-          <h1>&#8249;</h1>
+          <div className="chevronWrapper inactive">
+            <div className="chevron left"></div>
+          </div>
           <h1>August 2019</h1>
-          <h1>&#8250;</h1>
+          <div className="chevronWrapper">
+            <div className="chevron right"></div>
+          </div>
         </div>
         <div className="dayNames">
           {this.dayNames.map((name, index) => {
@@ -31,7 +35,7 @@ class PickerCalendar extends Component {
             }
             else {
               return <div  key={index + 1} id={index + 1}>{index + 1}</div>;
-            }
+            };
           })}
         </div>
       </div>

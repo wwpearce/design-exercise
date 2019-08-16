@@ -1,0 +1,25 @@
+@import '../variables';
+@import './easing';
+
+.chevron {
+  display: inline-block;
+  border-right: 1px solid $text-color;
+  border-bottom: 1px solid $text-color;
+  width: 6px;
+  height: 6px;
+  &.left {
+    transform: rotate(-225deg);
+  }
+  &.right {
+    transform: rotate(-45deg);
+  }
+  &.inactive {
+    border-color: $inactive;
+  }
+}
+
+div {
+  &:hover {
+    transition: background-color $easing-duration $easeOutCirc;
+  }
+}

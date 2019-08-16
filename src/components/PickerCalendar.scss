@@ -7,8 +7,37 @@
   .monthWrapper {
     align-items: center;
     display: flex;
-    justify-content: space-between;
-  }
+    justify-content: center;
+    height: $chevron-size;
+    h1 {
+      width: 186px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .chevronWrapper {
+      width: $chevron-size;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      border-radius: $chevron-size;
+      cursor: pointer;
+      &:hover {
+        background-color: $chevron-hover;
+      }
+      &.inactive {
+        cursor: auto;
+        &:hover {
+          background-color: transparent;
+        }
+          .chevron {
+            border-color: $inactive;
+          }
+        }
+      }
+    }
   .dayNames {
     align-items: center;
     display: flex;
@@ -17,6 +46,7 @@
     div {
       width: $date-size;
       text-transform: uppercase;
+      font-size: $day-names;
     }
   }
   .datesWrapper {
@@ -34,9 +64,13 @@
       box-sizing: border-box;
       cursor: pointer;
       color: $interactive-blue;
+      font-size: $dates;
       &.active {
         background-color: $interactive-blue;
         color: $white;
+      }
+      &.inactive {
+        color: $inactive;
       }
       &:hover {
         border: 1px solid $interactive-blue;

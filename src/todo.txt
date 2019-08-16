@@ -2,3 +2,6 @@
 - Make sure hit area sticks to the correct spot
 - Retool box shadow
 - Finish (restyle) input date box
+- Month chevrons need some re-tooling (fix hit area too)
+- Try to re-tool spacing on calendar so it's all math derived from one source
+of truth

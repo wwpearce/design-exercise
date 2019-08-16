@@ -1,13 +1,17 @@
 @import './scss/reset';
+@import './scss/shared';
+@import './variables';
+
+* {
+  user-select: none;
+}
 
 body {
-  margin: 0;
   font-family: "Helvetica", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+h1 {
+  font-size: $week-days;
 }
