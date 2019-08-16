@@ -2,18 +2,21 @@
 
 .pickerCalendar {
   padding: 32px;
+  border-bottom: 1px solid $border-color;
+  color: $text-color;
   .monthWrapper {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
   }
   .dayNames {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 12px 0 16px 0;
     div {
       width: $date-size;
+      text-transform: uppercase;
     }
   }
   .datesWrapper {
@@ -21,10 +24,23 @@
     grid-auto-rows: $date-size;
     grid-template-columns: repeat(7, $date-size);
     justify-content: space-between;
-    grid-gap: 12px;
     width: 100%;
     div {
+      align-items: center;
+      display: flex;
       height: $date-size;
+      justify-content: center;
+      border-radius: $date-size;
+      box-sizing: border-box;
+      cursor: pointer;
+      color: $interactive-blue;
+      &.active {
+        background-color: $interactive-blue;
+        color: $white;
+      }
+      &:hover {
+        border: 1px solid $interactive-blue;
+      }
     }
   }
   .dayNames, .datesWrapper {
