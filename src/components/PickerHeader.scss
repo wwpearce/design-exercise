@@ -12,23 +12,22 @@
     font-size: 12px;
   }
   .dateInputWrapper {
-    height: 44px;
+    height: 42px;
     position: relative;
     input {
       box-sizing: border-box;
       height: 100%;
+      padding-left: 14px;
     }
-    &::after {
-      content: '< >';
-      font-size: 10px;
-      height: 10px;
+    .chevronsWrapper {
       position: absolute;
-      right: 0px;
-      text-align: center;
-      transform: translateY(50%);
-      transform-origin: center;
-      vertical-align: middle;
-      width: 30px;
+      top: 0;
+      right: 14px;
+      height: 100%;
+      display: flex;
+      width: 24px;
+      align-items: center;
+      justify-content: space-around;
     }
   }
 }

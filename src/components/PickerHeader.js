@@ -9,6 +9,10 @@ class PickerHeader extends Component {
         <p>Select date</p>
         <div className="dateInputWrapper">
           <input type="input" />
+          <div className="chevronsWrapper">
+            <div className="chevron left"></div>
+            <div className="chevron right"></div>
+          </div>
         </div>
       </div>
     );
