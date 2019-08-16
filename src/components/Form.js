@@ -19,12 +19,10 @@ class Form extends Component {
 
   showPicker = () => {
     this.setState({ show: true });
-    console.log(this.state.show);
   };
 
   hidePicker = () => {
     this.setState({ show: false });
-    console.log(this.state.show);
   };
 
   handleCancel = () => {
