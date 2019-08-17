@@ -9,8 +9,8 @@ class Picker extends Component {
     return (
       <div className={this.props.show ? "modal display-block" : "modal display-none"}>
         <section className="modal-main">
-          <PickerHeader />
-          <PickerCalendar />
+          <PickerHeader today={this.props.today}/>
+          <PickerCalendar today={this.props.today}/>
           <button onClick={this.props.handleCancel}>Cancel</button>
           <button onClick={this.props.handleDone}>Done</button>
         </section>

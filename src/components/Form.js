@@ -17,6 +17,16 @@ let formStyle = {
 class Form extends Component {
   state = { show: false };
 
+  getTodaysDate = () => {
+    let today = new Date();
+    const dd = String(today.getDate()).padStart(2, '0');
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const yyyy = today.getFullYear();
+
+    today = mm + '/' + dd + '/' + yyyy;
+    return today;
+  };
+
   showPicker = () => {
     this.setState({ show: true });
   };
@@ -38,6 +48,7 @@ class Form extends Component {
       <div>
         <Picker
           show={this.state.show}
+          today={this.getTodaysDate()}
           handleClose={this.hidePicker}
           handleCancel={this.handleCancel}
           handleDone={this.handleDone}
