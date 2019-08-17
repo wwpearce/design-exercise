@@ -8,7 +8,7 @@ class PickerHeader extends Component {
       <div className="pickerHeader">
         <p>Select date</p>
         <div className="dateInputWrapper">
-          <input type="input" value={this.props.today}/>
+          <input type="input" value={this.props.date}/>
           <div className="chevronsWrapper">
             <div className="chevron left"></div>
             <div className="chevron right"></div>

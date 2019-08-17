@@ -5,3 +5,4 @@
 - Month chevrons need some re-tooling (fix hit area too)
 - Try to re-tool spacing on calendar so it's all math derived from one source
 of truth
+- fix text jump on text input focus
