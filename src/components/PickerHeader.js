@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 import './PickerHeader.scss';
 
 class PickerHeader extends Component {
-  constructor(props) {
-    super(props);
-  };
+  // constructor(props) {
+  //   super(props);
+  // };
 
   handleInputChange = (e) => {
     console.log(e.target.value);
