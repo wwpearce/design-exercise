@@ -1,34 +1,61 @@
 @import '../variables';
 
 .formWrapper {
-  display: flex;
   align-items: center;
+
+  background-color: $background-color;
+  display: flex;
+  height: 100%;
   justify-content: center;
 
   width: 100%;
-  height: 100%;
-
-  background-color: $background-color;
 }
 
 .form {
+  background-position: center;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 745px;
+  min-width: 1009px;
   position: relative;
 
   width: 1009px;
-  min-width: 1009px;
-  height: 745px;
-
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
   .hit {
-    position: absolute;
-    top: 205px;
-    left: 30px;
-
-    width: 215px;
-    height: 42px;
 
     background-color: red;
+    height: 42px;
+    left: 30px;
+    position: absolute;
+    top: 205px;
+
+    width: 215px;
+  }
+}
+
+.mobile {
+  .modal {
+    @media only screen and (min-width: 320px) {
+      background-color: rgba(0,0,0,0.5);
+    }
+    .modal-main {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .form {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 745px;
+    min-width: unset;
+    position: relative;
+    width: 100%;
+    .hit {
+      left: 17px;
+      top: 183px;
+      width: 345px;
+    }
   }
 }
