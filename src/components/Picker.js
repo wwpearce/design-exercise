@@ -6,8 +6,32 @@ import PickerFooter from './PickerFooter';
 import './Picker.scss';
 
 class Picker extends Component {
+  handleKeyDown = (event) => {
+    // 27 = Escape
+    // 13 = Enter
+    switch( event.keyCode ) {
+        case 27:
+            this.props.handleCancel();
+            break;
+        case 13:
+            this.props.handleDone();
+            break;
+        default:
+            break;
+    };
+  };
+
   clearInputText = () => {
     document.getElementById('inputText').value = ''
+  };
+
+  componentDidMount(){
+    document.addEventListener("keydown", this.handleKeyDown);
+  };
+
+
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.handleKeyDown);
   };
 
   render() {
@@ -24,6 +48,7 @@ class Picker extends Component {
             state={this.props.state}
             date={this.props.date}
             setDate={this.props.setDate}
+            setMonth={this.props.setMonth}
             clearInputText={this.clearInputText}
           />
           <PickerFooter
@@ -31,6 +56,7 @@ class Picker extends Component {
             handleDone={this.props.handleDone}
           />
         </section>
+        <div onClick={this.props.handleCancel} className="modal-back"></div>
       </div>
   )};
 };

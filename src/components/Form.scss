@@ -15,6 +15,7 @@
   position: relative;
 
   width: 1009px;
+  min-width: 1009px;
   height: 745px;
 
   background-repeat: no-repeat;
@@ -28,6 +29,6 @@
     width: 215px;
     height: 42px;
 
-    background-color: transparent;
+    background-color: red;
   }
 }

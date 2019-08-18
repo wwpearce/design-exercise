@@ -45,6 +45,10 @@ class Form extends Component {
     console.log(this.state);
   };
 
+  setMonth = (month) => {
+    this.setState({ month: month });
+  };
+
   setDate = (date) => {
     this.setState({ date: date});
     // this.unformattedDate.setDate({date});
@@ -89,6 +93,7 @@ class Form extends Component {
           day={this.state.day}
           year={this.state.year}
           setDate={this.setDate}
+          setMonth={this.setMonth}
           show={this.state.show}
           handleClose={this.hidePicker}
           handleCancel={this.handleCancel}

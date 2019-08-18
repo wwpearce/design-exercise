@@ -38,9 +38,14 @@ class PickerCalendar extends Component {
           {[...Array(this.monthLength)].map((name, index) => {
             if(index === 0) {
               let style = {
-                gridColumnStart: 7
+                gridColumnStart: 5
               };
-              return <div  key={index + 1} id={index + 1} data-index={index + 1} style={style} onClick={this.handleClick.bind(this)}>{index + 1}</div>;
+              if((index + 1) === parseInt(this.props.date, 10)) {
+                return <div  key={index + 1} id={index + 1} data-index={index + 1} className="active" style={style} onClick={this.handleClick.bind(this)}>{index + 1}</div>;
+              }
+              else {
+                return <div  key={index + 1} id={index + 1} data-index={index + 1} style={style} onClick={this.handleClick.bind(this)}>{index + 1}</div>;
+              };
             }
             else if((index + 1) === parseInt(this.props.date, 10)) {
               return <div  key={index + 1} id={index + 1} data-index={index + 1} className="active" onClick={this.handleClick.bind(this)}>{index + 1}</div>;
