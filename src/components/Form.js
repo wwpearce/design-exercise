@@ -38,12 +38,30 @@ class Form extends Component {
     };
   };
 
+  setDateObject = () => {
+    this.setState({
+      unformattedDate: new Date(2019, 7, 25)
+    })
+    console.log(this.state);
+  };
+
   setDate = (date) => {
     this.setState({ date: date});
+    // this.unformattedDate.setDate({date});
+    // let oldDate = new Date(this.state.unformattedDate);
+    // let newDate = oldDate.setDate(parseInt(date, 10));
+    // this.setState({
+    //   unformattedDate: newDate
+    // });
+    // console.log(this.state);
   };
 
   showPicker = () => {
-    this.setState({ show: true });
+    let date = this.state.date;
+    this.setState({
+      show: true,
+      oldDate: date
+     });
   };
 
   hidePicker = () => {
@@ -51,10 +69,13 @@ class Form extends Component {
   };
 
   handleCancel = () => {
+    let oldDate = this.state.oldDate
+    this.setState({ date: oldDate })
     this.hidePicker();
   };
 
   handleDone = () => {
+    this.setDateObject();
     this.hidePicker();
   };
 

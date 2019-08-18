@@ -6,11 +6,6 @@ import PickerFooter from './PickerFooter';
 import './Picker.scss';
 
 class Picker extends Component {
-  constructor(props) {
-    super(props);
-    console.log(props);
-  };
-
   clearInputText = () => {
     document.getElementById('inputText').value = ''
   };

@@ -16,7 +16,7 @@ class PickerHeader extends Component {
       <div className="pickerHeader">
         <p>Select date</p>
         <div className="dateInputWrapper">
-          <input type="input" id="inputText" onChange={this.handleInputChange} placeholder={this.props.month + '/' + this.props.date + '/' + this.props.year}/>
+          <input type="input" id="inputText" onChange={this.handleInputChange} placeholder={(this.props.month + 1) + '/' + this.props.date + '/' + this.props.year}/>
           <div className="chevronsWrapper">
             <div className="chevron left"></div>
             <div className="chevron right"></div>
