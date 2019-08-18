@@ -19,12 +19,20 @@ class Form extends Component {
     super(props);
 
     const unformattedDate = new Date();
-    const date = this.formatDate(unformattedDate);
+    const month = unformattedDate.getMonth();
+    const date = unformattedDate.getDate();
+    const day = unformattedDate.getDay();
+    const year = unformattedDate.getFullYear();
+    const formattedDate = this.formatDate(unformattedDate);
 
     this.state = {
       show: false,
       unformattedDate: unformattedDate,
-      date: date
+      formattedDate: formattedDate,
+      month: month,
+      date: date,
+      day: day,
+      year: year
     };
   };
 
