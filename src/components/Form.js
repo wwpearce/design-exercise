@@ -70,7 +70,10 @@ class Form extends Component {
       <div>
         <Picker
           state={this.state}
+          month={this.state.month}
           date={this.state.date}
+          day={this.state.day}
+          year={this.state.year}
           setDate={this.setDate}
           show={this.state.show}
           handleClose={this.hidePicker}

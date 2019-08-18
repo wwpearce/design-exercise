@@ -10,14 +10,11 @@ class PickerCalendar extends Component {
     this.monthLength = 31;
 
     this.handleClick = this.handleClick.bind(this);
-    console.log(props);
-    // console.log(state);
   };
 
   handleClick = (e) => {
     this.props.setDate(e.currentTarget.dataset.index);
-    // this.setState({date: e.currentTarget.dataset.index});
-    // console.log(this.state);
+    this.props.clearInputText();
   };
 
   render() {
@@ -39,7 +36,6 @@ class PickerCalendar extends Component {
         </div>
         <div className="datesWrapper">
           {[...Array(this.monthLength)].map((name, index) => {
-            console.log(index, parseInt(this.props.date, 10));
             if(index === 0) {
               let style = {
                 gridColumnStart: 7
