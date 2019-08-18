@@ -2,7 +2,9 @@
 
 .pickerCalendar {
   padding: 32px;
+  height: 372px;
   border-bottom: 1px solid $border-color;
+  box-sizing: border-box;
   color: $text-color;
   .monthWrapper {
     align-items: center;

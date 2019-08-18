@@ -1,0 +1,33 @@
+@import '../variables';
+
+.pickerFooter {
+  height: 56px;
+  padding: 0 8px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  div {
+    &:first-of-type {
+      margin-right: 4px;
+    }
+    &:last-of-type {
+      margin-left: 4px;
+    }
+  }
+  button {
+    padding: 11px 13px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    &.cancelBtn {
+      color: $interactive-blue;
+    }
+    &.doneBtn {
+      color: $white;
+      background-color: $interactive-blue;
+    }
+    &:active {
+      background-color: $mid-gray;
+    }
+  }
+}

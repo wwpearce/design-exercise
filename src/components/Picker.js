@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PickerHeader from './PickerHeader';
 import PickerCalendar from './PickerCalendar';
+import PickerFooter from './PickerFooter';
 
 import './Picker.scss';
 
@@ -30,8 +31,10 @@ class Picker extends Component {
             setDate={this.props.setDate}
             clearInputText={this.clearInputText}
           />
-          <button onClick={this.props.handleCancel}>Cancel</button>
-          <button onClick={this.props.handleDone}>Done</button>
+          <PickerFooter
+            handleCancel={this.props.handleCancel}
+            handleDone={this.props.handleDone}
+          />
         </section>
       </div>
   )};
