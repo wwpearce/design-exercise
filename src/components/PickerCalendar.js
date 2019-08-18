@@ -8,8 +8,18 @@ class PickerCalendar extends Component {
     this.dayNames = ["s", "m", "t", "w", "t", "f", "s"];
     this.months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     this.monthLength = 31;
-    console.log(this.props);
-  }
+
+    this.handleClick = this.handleClick.bind(this);
+    console.log(props);
+    // console.log(state);
+  };
+
+  handleClick = (e) => {
+    this.props.setDate(e.currentTarget.dataset.index);
+    // this.setState({date: e.currentTarget.dataset.index});
+    // console.log(this.state);
+  };
+
   render() {
     return (
       <div className="pickerCalendar">
@@ -29,17 +39,18 @@ class PickerCalendar extends Component {
         </div>
         <div className="datesWrapper">
           {[...Array(this.monthLength)].map((name, index) => {
+            console.log(index, parseInt(this.props.date, 10));
             if(index === 0) {
               let style = {
                 gridColumnStart: 7
               };
-              return <div  key={index + 1} id={index + 1} style={style}>{index + 1}</div>;
+              return <div  key={index + 1} id={index + 1} data-index={index + 1} style={style} onClick={this.handleClick.bind(this)}>{index + 1}</div>;
             }
-            if((index + 1) === this.props.state.date) {
-              return <div  key={index + 1} id={index + 1} className="active">{index + 1}</div>;
+            else if((index + 1) === parseInt(this.props.date, 10)) {
+              return <div  key={index + 1} id={index + 1} data-index={index + 1} className="active" onClick={this.handleClick.bind(this)}>{index + 1}</div>;
             }
             else {
-              return <div  key={index + 1} id={index + 1}>{index + 1}</div>;
+              return <div  key={index + 1} id={index + 1} data-index={index + 1} onClick={this.handleClick.bind(this)}>{index + 1}</div>;
             };
           })}
         </div>

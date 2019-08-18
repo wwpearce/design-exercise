@@ -45,6 +45,10 @@ class Form extends Component {
     return formattedDate;
   };
 
+  setDate = (date) => {
+    this.setState({ date: date});
+  };
+
   showPicker = () => {
     this.setState({ show: true });
   };
@@ -66,6 +70,8 @@ class Form extends Component {
       <div>
         <Picker
           state={this.state}
+          date={this.state.date}
+          setDate={this.setDate}
           show={this.state.show}
           handleClose={this.hidePicker}
           handleCancel={this.handleCancel}
