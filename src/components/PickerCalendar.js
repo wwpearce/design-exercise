@@ -19,15 +19,31 @@ class PickerCalendar extends Component {
     this.props.clearInputText();
   };
 
+  handleChevronClick = (e) => {
+    let oldMonth = this.props.state.month;
+    let newMonth;
+    if (e.target.dataset.direction === "right" && oldMonth < 11) {
+      newMonth = oldMonth + 1;
+    }
+    else if (e.target.dataset.direction === "left" && oldMonth > 0) {
+      newMonth = oldMonth - 1;
+    }
+    else {
+      newMonth = oldMonth;
+    }
+    console.log(newMonth);
+    this.props.setMonth(newMonth);
+  };
+
   render() {
     return (
       <div className="pickerCalendar">
         <div className="monthWrapper">
-          <div className="chevronWrapper inactive">
-            <div className="chevron left"></div>
+          <div className="chevronWrapper">
+            <div data-direction="left" onClick={this.handleChevronClick} className="chevron left"></div>
           </div>
           <h1>{this.months[this.props.state.month] + ' ' + this.props.state.year}</h1>
-          <div className="chevronWrapper">
+          <div data-direction="right" onClick={this.handleChevronClick} className="chevronWrapper">
             <div className="chevron right"></div>
           </div>
         </div>

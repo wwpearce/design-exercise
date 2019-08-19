@@ -51,13 +51,6 @@ class Form extends Component {
 
   setDate = (date) => {
     this.setState({ date: date});
-    // this.unformattedDate.setDate({date});
-    // let oldDate = new Date(this.state.unformattedDate);
-    // let newDate = oldDate.setDate(parseInt(date, 10));
-    // this.setState({
-    //   unformattedDate: newDate
-    // });
-    // console.log(this.state);
   };
 
   showPicker = () => {
