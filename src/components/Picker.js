@@ -50,6 +50,7 @@ class Picker extends Component {
             setDate={this.props.setDate}
             setMonth={this.props.setMonth}
             clearInputText={this.clearInputText}
+            today={this.props.today}
           />
           <PickerFooter
             handleCancel={this.props.handleCancel}

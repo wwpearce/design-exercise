@@ -87,6 +87,7 @@ class Form extends Component {
     return (
       <div className={mobileStyles} >
         <Picker
+          today={this.state.unformattedDate.getDate()}
           state={this.state}
           month={this.state.month}
           date={this.state.date}

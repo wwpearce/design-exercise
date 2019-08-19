@@ -53,13 +53,22 @@ class PickerCalendar extends Component {
             if((index + 1) === parseInt(this.props.date, 10) && (index === 0)) {
               classes="first active"
             };
-            if((index + 1) === 3 || (index + 1) === 4 || (index + 1) === 10 || (index + 1) === 11 || (index + 1) === 17 || (index + 1) === 18 || (index + 1) === 24 || (index + 1) === 25 || (index + 1) === 31) {
+            // TODO: This could be cleaned up with an array
+            // const weekends = [3,4,10,11,17,18,24,25, 31] and loop through that or something
+            if(
+              (index + 1) === 3 ||
+              (index + 1) === 4 ||
+              (index + 1) === 10 ||
+              (index + 1) === 11 ||
+              (index + 1) === 17 ||
+              (index + 1) === 18 ||
+              (index + 1) === 24 ||
+              (index + 1) === 25 ||
+              (index + 1) === 31 ||
+              index < this.props.today
+            ){
               classes="inactive"
-              onClick="";
-            };
-            if((index + 1) === parseInt(this.props.date, 10) && (index + 1) === 3 || (index + 1) === 4 || (index + 1) === 10 || (index + 1) === 11 || (index + 1) === 17 || (index + 1) === 18 || (index + 1) === 24 || (index + 1) === 25 || (index + 1) === 31) {
-              classes="inactive"
-              onClick="";
+              onClick=null;
             };
             return <div  style={style} key={index + 1} id={index + 1} data-index={index + 1} className={classes} onClick={onClick}>{index + 1}</div>;
           })}
