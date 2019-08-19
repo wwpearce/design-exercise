@@ -5,9 +5,8 @@
 - ~~Month chevrons need some re-tooling (fix hit area too)~~
 - Try to re-tool spacing on calendar so it's all math derived from one source
 of truth
-- ~~fix text jump on text input focus~~
-- ~~fix active class on first day of month~~
-
-- ~~inactive dates~~
-- try to add another month or two
-- if you have time make text input box active
+- ~~Fix text jump on text input focus~~
+- ~~Fix active class on first day of month~~
+- ~~Inactive dates~~
+- Try to add another month or two
+- If you have time make text input box active

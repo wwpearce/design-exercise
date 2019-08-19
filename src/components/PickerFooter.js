@@ -3,14 +3,6 @@ import React, { Component } from 'react';
 import './PickerFooter.scss';
 
 class PickerFooter extends Component {
-  // constructor(props) {
-  //   super(props);
-  // };
-
-  handleInputChange = (e) => {
-    console.log(e.target.value);
-  };
-
   render() {
     return (
       <div className="pickerFooter">

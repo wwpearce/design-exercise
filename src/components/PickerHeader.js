@@ -3,15 +3,13 @@ import React, { Component } from 'react';
 import './PickerHeader.scss';
 
 class PickerHeader extends Component {
-  // constructor(props) {
-  //   super(props);
-  // };
-
   handleInputChange = (e) => {
     console.log(e.target.value);
   };
 
   render() {
+    // Hard-coding the value of the input text box, didn't have time to fully
+    // flesh that component out :\
     return (
       <div className="pickerHeader">
         <p>Select date</p>

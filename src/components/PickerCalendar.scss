@@ -1,4 +1,4 @@
-@import '../variables';
+@import '../scss/variables';
 
 .pickerCalendar {
   padding: 32px;
@@ -81,6 +81,8 @@
       &:hover {
         border: 1px solid $interactive-blue;
       }
+      /* this is not the greatest solution but works for now */
+      /* using it to gray out weekends */
       &:nth-of-type(3), &:nth-of-type(10), &:nth-of-type(17), &:nth-of-type(24), &:nth-of-type(31) {
         color: $inactive;
       }

@@ -6,6 +6,7 @@ import PickerFooter from './PickerFooter';
 import './Picker.scss';
 
 class Picker extends Component {
+  // Handle keydown events
   handleKeyDown = (event) => {
     // 27 = Escape
     // 13 = Enter
@@ -35,6 +36,9 @@ class Picker extends Component {
   };
 
   render() {
+    // Probably passing more data to components than are needed
+    // I would remove most of this when moving to a higher fidelity prototype
+    // but priotizing speed for now
     return (
       <div className={this.props.show ? "modal display-block" : "modal display-none"}>
         <section className="modal-main">
