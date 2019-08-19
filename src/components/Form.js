@@ -20,6 +20,9 @@ class Form extends Component {
 
     const unformattedDate = new Date();
 
+    // Global state object
+    // Since this is relatively simple, not using Redux for state management
+
     this.state = {
       show: false,
       unformattedDate: unformattedDate,
@@ -38,6 +41,8 @@ class Form extends Component {
     };
   };
 
+  // Helper state-setters
+
   setDateObject = () => {
     this.setState({
       unformattedDate: new Date(2019, 7, 25)
@@ -52,6 +57,8 @@ class Form extends Component {
   setDate = (date) => {
     this.setState({ date: date});
   };
+
+  // Global button functions live here and are populated down
 
   showPicker = () => {
     let date = this.state.date;

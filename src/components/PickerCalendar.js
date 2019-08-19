@@ -5,6 +5,8 @@ import "./PickerCalendar.scss";
 class PickerCalendar extends Component {
   constructor(props) {
     super(props);
+    // Tried to make this as DRY as possible, but needed to hard-code some months
+    // and values here to move fast (but hopefully not break things)
     this.dayNames = ["s", "m", "t", "w", "t", "f", "s"];
     this.months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     this.monthLength = 31;
@@ -69,6 +71,8 @@ class PickerCalendar extends Component {
             if((index + 1) === parseInt(this.props.date, 10) && (index === 0)) {
               classes="first active"
             };
+            // Apologies for this messy conditional. I would circle back
+            // and fix for a higher fidelity prototype
             // TODO: This could be cleaned up with an array
             // const weekends = [3,4,10,11,17,18,24,25, 31] and loop through that or something
             if(
