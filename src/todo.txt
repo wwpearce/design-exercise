@@ -8,6 +8,6 @@ of truth
 - ~~fix text jump on text input focus~~
 - ~~fix active class on first day of month~~
 
-- inactive dates
+- ~~inactive dates~~
 - try to add another month or two
 - if you have time make text input box active
