@@ -30,7 +30,7 @@ class PickerCalendar extends Component {
     }
     else {
       newMonth = oldMonth;
-    }
+    };
     console.log(newMonth);
     this.props.setMonth(newMonth);
   };
