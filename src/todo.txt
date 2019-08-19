@@ -1,9 +1,13 @@
 - Optimize images and make sure they are correctly responsive
-- Make sure hit area sticks to the correct spot
+- ~~Make sure hit area sticks to the correct spot~~
 - Retool box shadow
-- Finish (restyle) input date box
-- Month chevrons need some re-tooling (fix hit area too)
+- ~~Finish (restyle) input date box~~
+- ~~Month chevrons need some re-tooling (fix hit area too)~~
 - Try to re-tool spacing on calendar so it's all math derived from one source
 of truth
-- fix text jump on text input focus
-- fix active class on first day of month
+- ~~fix text jump on text input focus~~
+- ~~fix active class on first day of month~~
+
+- inactive dates
+- try to add another month or two
+- if you have time make text input box active

@@ -8,6 +8,8 @@ class PickerCalendar extends Component {
     this.dayNames = ["s", "m", "t", "w", "t", "f", "s"];
     this.months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     this.monthLength = 31;
+    this.dayStart = 5;
+    this.sunday = 6 - this.dayStart;
 
     this.handleClick = this.handleClick.bind(this);
   };
@@ -36,23 +38,30 @@ class PickerCalendar extends Component {
         </div>
         <div className="datesWrapper">
           {[...Array(this.monthLength)].map((name, index) => {
-            if(index === 0) {
-              let style = {
-                gridColumnStart: 5
-              };
-              if((index + 1) === parseInt(this.props.date, 10)) {
-                return <div  key={index + 1} id={index + 1} data-index={index + 1} className="active" style={style} onClick={this.handleClick.bind(this)}>{index + 1}</div>;
-              }
-              else {
-                return <div  key={index + 1} id={index + 1} data-index={index + 1} style={style} onClick={this.handleClick.bind(this)}>{index + 1}</div>;
-              };
-            }
-            else if((index + 1) === parseInt(this.props.date, 10)) {
-              return <div  key={index + 1} id={index + 1} data-index={index + 1} className="active" onClick={this.handleClick.bind(this)}>{index + 1}</div>;
-            }
-            else {
-              return <div  key={index + 1} id={index + 1} data-index={index + 1} onClick={this.handleClick.bind(this)}>{index + 1}</div>;
+            let classes;
+            let style;
+            let onClick = this.handleClick.bind(this);
+            if((index + 1) === parseInt(this.props.date, 10)) {
+              classes="active";
             };
+            if(index === 0) {
+              classes=" first";
+              style = {
+                gridColumnStart: this.dayStart
+              };
+            };
+            if((index + 1) === parseInt(this.props.date, 10) && (index === 0)) {
+              classes="first active"
+            };
+            if((index + 1) === 3 || (index + 1) === 4 || (index + 1) === 10 || (index + 1) === 11 || (index + 1) === 17 || (index + 1) === 18 || (index + 1) === 24 || (index + 1) === 25 || (index + 1) === 31) {
+              classes="inactive"
+              onClick="";
+            };
+            if((index + 1) === parseInt(this.props.date, 10) && (index + 1) === 3 || (index + 1) === 4 || (index + 1) === 10 || (index + 1) === 11 || (index + 1) === 17 || (index + 1) === 18 || (index + 1) === 24 || (index + 1) === 25 || (index + 1) === 31) {
+              classes="inactive"
+              onClick="";
+            };
+            return <div  style={style} key={index + 1} id={index + 1} data-index={index + 1} className={classes} onClick={onClick}>{index + 1}</div>;
           })}
         </div>
       </div>

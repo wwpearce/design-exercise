@@ -73,9 +73,19 @@
       }
       &.inactive {
         color: $inactive;
+        cursor: auto;
+        &:hover {
+          border: 1px solid transparent;
+        }
       }
       &:hover {
         border: 1px solid $interactive-blue;
+      }
+      &:nth-of-type(3), &:nth-of-type(10), &:nth-of-type(17), &:nth-of-type(24), &:nth-of-type(31) {
+        color: $inactive;
+      }
+      &:nth-of-type(4), &:nth-of-type(11), &:nth-of-type(18), &:nth-of-type(25) {
+        color: $inactive;
       }
     }
   }
