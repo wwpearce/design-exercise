@@ -2,7 +2,7 @@
 
 .pickerFooter {
   height: 56px;
-  padding: 0 8px;
+  padding: 0 12px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -15,10 +15,11 @@
     }
   }
   button {
-    padding: 11px 13px;
+    padding: 8px 14px;
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    font-size: $button-font-size;
     &.cancelBtn {
       color: $interactive-blue;
     }
